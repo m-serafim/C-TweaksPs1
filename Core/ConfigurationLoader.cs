@@ -53,6 +53,11 @@ namespace C_TweaksPs1.Core
             }
         }
 
+        /// <summary>
+        /// Organizes tweaks by their category for easier navigation.
+        /// </summary>
+        /// <param name="config">The loaded tweak configuration.</param>
+        /// <returns>A dictionary mapping category names to lists of tweak keys, ordered by the tweak's Order property.</returns>
         public Dictionary<string, List<string>> GetTweaksByCategory(TweakConfig config)
         {
             var categories = new Dictionary<string, List<string>>();
