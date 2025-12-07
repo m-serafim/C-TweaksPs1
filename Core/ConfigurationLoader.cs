@@ -1,22 +1,50 @@
+using System.Reflection;
 using System.Text.Json;
 using C_TweaksPs1.Models;
 
 namespace C_TweaksPs1.Core
 {
     /// <summary>
-    /// Loads and validates the tweak configuration from JSON files.
+    /// Loads and validates the tweak configuration from embedded resources or JSON files.
     /// </summary>
     public class ConfigurationLoader
     {
         private const string DefaultConfigPath = "config/tweaks.json";
+        private const string EmbeddedResourceName = "tweaks.json";
+
+        /// <summary>
+        /// Loads the configuration from embedded resources.
+        /// </summary>
+        /// <returns>JSON content as string, or null if not found.</returns>
+        private string? LoadFromEmbeddedResource()
+        {
+            try
+            {
+                var assembly = Assembly.GetExecutingAssembly();
+                var resourceName = EmbeddedResourceName;
+
+                // Try to find the resource
+                using var stream = assembly.GetManifestResourceStream(resourceName);
+                if (stream == null)
+                {
+                    return null;
+                }
+
+                using var reader = new StreamReader(stream);
+                return reader.ReadToEnd();
+            }
+            catch
+            {
+                return null;
+            }
+        }
 
         /// <summary>
         /// Finds the configuration file by searching multiple possible locations.
         /// </summary>
         /// <param name="configPath">Optional custom path to the configuration file.</param>
-        /// <returns>The full path to the configuration file if found.</returns>
-        /// <exception cref="FileNotFoundException">Thrown when the configuration file cannot be found in any location.</exception>
-        private string FindConfigFile(string? configPath = null)
+        /// <returns>The full path to the configuration file if found, null otherwise.</returns>
+        private string? FindConfigFile(string? configPath = null)
         {
             // If a custom path is provided, use it directly
             if (!string.IsNullOrEmpty(configPath))
@@ -25,7 +53,7 @@ namespace C_TweaksPs1.Core
                 {
                     return Path.GetFullPath(configPath);
                 }
-                throw new FileNotFoundException($"Custom configuration file not found: {Path.GetFullPath(configPath)}");
+                return null;
             }
 
             // Try multiple locations in order of preference
@@ -35,7 +63,7 @@ namespace C_TweaksPs1.Core
             locationsToTry.Add(Path.Combine(Directory.GetCurrentDirectory(), DefaultConfigPath));
 
             // 2. Relative to executable location
-            var exePath = Environment.ProcessPath ?? System.Reflection.Assembly.GetExecutingAssembly().Location;
+            var exePath = Environment.ProcessPath ?? Assembly.GetExecutingAssembly().Location;
             if (!string.IsNullOrEmpty(exePath))
             {
                 var exeDir = Path.GetDirectoryName(exePath);
@@ -61,35 +89,52 @@ namespace C_TweaksPs1.Core
                 }
             }
 
-            // Config file not found - build helpful error message
-            var errorMessage = $"Configuration file '{DefaultConfigPath}' not found in any of the following locations:\n";
-            foreach (var location in locationsToTry.Distinct())
-            {
-                errorMessage += $"  - {location}\n";
-            }
-            errorMessage += "\nPlease ensure the 'config' folder and 'tweaks.json' file are in the same directory as the executable.";
-
-            throw new FileNotFoundException(errorMessage);
+            return null;
         }
 
         /// <summary>
-        /// Loads the tweak configuration from the specified JSON file.
+        /// Loads the tweak configuration from embedded resources or external files.
         /// </summary>
         /// <param name="configPath">Optional path to the configuration file. Uses default if not provided.</param>
         /// <returns>A TweakConfig object containing all loaded tweaks.</returns>
-        /// <exception cref="FileNotFoundException">Thrown when the configuration file cannot be found.</exception>
+        /// <exception cref="FileNotFoundException">Thrown when the configuration cannot be found.</exception>
         /// <exception cref="InvalidOperationException">Thrown when no tweaks are found in the file.</exception>
         public TweakConfig LoadConfiguration(string? configPath = null)
         {
             try
             {
-                var path = FindConfigFile(configPath);
-                
-                Console.WriteLine($"Loading configuration from: {path}");
+                string? jsonContent = null;
+                string source = "";
 
-                // Read JSON file with proper error handling
-                var jsonContent = File.ReadAllText(path);
-                
+                // Try embedded resource first (for single-file deployment)
+                jsonContent = LoadFromEmbeddedResource();
+                if (jsonContent != null)
+                {
+                    source = "embedded resource";
+                    Console.WriteLine($"? Loading configuration from embedded resource");
+                }
+                else
+                {
+                    // Fallback to external file
+                    var path = FindConfigFile(configPath);
+                    if (path != null)
+                    {
+                        jsonContent = File.ReadAllText(path);
+                        source = path;
+                        Console.WriteLine($"? Loading configuration from: {path}");
+                    }
+                }
+
+                // If still no config found, throw error
+                if (jsonContent == null)
+                {
+                    var errorMessage = "Configuration file not found.\n";
+                    errorMessage += "This is a single-file executable with embedded configuration.\n";
+                    errorMessage += "If you see this error, the build may have failed to embed resources properly.\n";
+                    errorMessage += "\nAlternatively, you can place a 'config/tweaks.json' file next to the executable.";
+                    throw new FileNotFoundException(errorMessage);
+                }
+
                 // Configure JSON deserialization options for flexibility
                 var options = new JsonSerializerOptions
                 {
@@ -103,10 +148,10 @@ namespace C_TweaksPs1.Core
                 
                 if (tweaks == null || tweaks.Count == 0)
                 {
-                    throw new InvalidOperationException("No tweaks found in configuration file");
+                    throw new InvalidOperationException("No tweaks found in configuration");
                 }
 
-                Console.WriteLine($"? Loaded {tweaks.Count} tweaks from configuration");
+                Console.WriteLine($"? Loaded {tweaks.Count} tweaks from {source}");
                 return new TweakConfig { Tweaks = tweaks };
             }
             catch (Exception ex)

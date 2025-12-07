@@ -1,101 +1,65 @@
-# Quick Start Guide for End Users
+# Quick Start Guide - Single File Executable
 
 ## What You Received
 
-You should have received a folder or ZIP file containing:
-- `C#TweaksPs1.exe` - The main application
-- `config` folder with `tweaks.json` - Configuration file
-- Several `.dll` files - Required dependencies
+You received **one file**:
+- `C#TweaksPs1.exe` - The complete application (everything included!)
 
-## Important: File Structure
+That's it! No config files, no folders, no DLLs - just one executable.
 
-**DO NOT SEPARATE THESE FILES!** The application requires the `config` folder to be in the same directory as the executable.
+## ? Single-File Deployment
 
-? **Correct structure:**
-```
-MyFolder/
-??? C#TweaksPs1.exe
-??? config/
-?   ??? tweaks.json
-??? (other .dll files)
-```
+This application uses advanced packaging to include:
+- ? All program code
+- ? All dependencies
+- ? Configuration file (tweaks.json)
+- ? .NET runtime
 
-? **Incorrect:**
-- Moving `C#TweaksPs1.exe` to Desktop without the `config` folder
-- Renaming or moving the `config` folder
-- Running the `.exe` from a different location
+Everything you need is in that one file!
 
 ## How to Run
 
-### First Time Setup
+### Step 1: Save the File
 
-1. **Extract all files** (if you received a ZIP):
-   - Right-click the ZIP file
-   - Select "Extract All..."
-   - Choose a permanent location (e.g., `C:\Programs\TweaksPs1\`)
+Save `C#TweaksPs1.exe` anywhere you want:
+- Desktop
+- Documents folder
+- USB drive
+- Network location
+- Any folder on your PC
 
-2. **Keep files together**:
-   - Do NOT move just the `.exe` file
-   - The entire folder must stay together
+### Step 2: Run as Administrator
 
-### Running the Application
+**IMPORTANT**: This application needs administrator rights to modify Windows settings.
 
-1. **Locate** `C#TweaksPs1.exe` in the extracted folder
+1. **Right-click** on `C#TweaksPs1.exe`
+2. **Select** "Run as administrator"
+3. **Click** "Yes" when Windows asks for permission (UAC prompt)
 
-2. **Right-click** on `C#TweaksPs1.exe`
+### Step 3: Use the Application
 
-3. **Select** "Run as administrator"
+The application will start and show you the menu!
 
-4. **Click** "Yes" when prompted by User Account Control (UAC)
+## ?? Common Mistakes
 
-5. The application will start and load the configuration
+### ? Double-clicking the file
+**Problem**: The app needs administrator rights  
+**Solution**: Right-click ? Run as administrator
+
+### ? "Windows protected your PC" message
+**Problem**: Windows SmartScreen blocks unsigned apps  
+**Solution**: Click "More info" ? "Run anyway"
+
+### ? Antivirus blocks or deletes the file
+**Problem**: Some antivirus software flags new executables  
+**Solution**: Add exception for C#TweaksPs1.exe or temporarily disable antivirus
 
 ## System Requirements
 
 - **Operating System**: Windows 10 or Windows 11
-- **Privileges**: Administrator rights required
-- **.NET Runtime**: 
-  - Self-contained version: No additional software needed
-  - Framework-dependent version: .NET 8 Runtime required ([Download here](https://dotnet.microsoft.com/download/dotnet/8.0))
-
-## Troubleshooting
-
-### Error: "Configuration file not found: config/tweaks.json"
-
-**Cause**: The `config` folder is missing or not in the correct location.
-
-**Solution**:
-1. Ensure the `config` folder is in the same directory as `C#TweaksPs1.exe`
-2. Verify `tweaks.json` exists inside the `config` folder
-3. Re-extract all files from the original ZIP if necessary
-
-### Error: "This application requires administrator privileges"
-
-**Cause**: The application was not run as administrator.
-
-**Solution**:
-1. Right-click `C#TweaksPs1.exe`
-2. Select "Run as administrator"
-3. Click "Yes" on the UAC prompt
-
-### Application Won't Start (No Error Message)
-
-**Possible causes**:
-1. Missing .NET 8 Runtime (framework-dependent version only)
-   - Solution: Install [.NET 8 Runtime](https://dotnet.microsoft.com/download/dotnet/8.0)
-
-2. Antivirus blocking the application
-   - Solution: Add an exception for `C#TweaksPs1.exe`
-
-3. Corrupted download
-   - Solution: Re-download and extract again
-
-### Other Issues
-
-If you encounter any other problems:
-1. Take a screenshot of the error message
-2. Note down exactly what you were doing when the error occurred
-3. Contact the person who provided you with this application
+- **Privileges**: Administrator rights
+- **.NET Runtime**: Not required! (included in the executable)
+- **Disk Space**: ~100 MB for the single file
 
 ## What This Application Does
 
@@ -106,29 +70,137 @@ This is a Windows tweaking utility that allows you to:
 - Apply performance optimizations
 - Customize Windows behavior
 
-**?? IMPORTANT SAFETY NOTES:**
-- Always create a system restore point before applying tweaks
-- Read the description of each tweak before applying it
-- You can undo most tweaks using the built-in undo feature
-- Some tweaks may require a restart to take effect
+All tweaks can be applied and undone safely.
+
+## Safety Notes
+
+?? **Before using:**
+1. Create a system restore point (Start ? "Create a restore point")
+2. Read the description of each tweak before applying
+3. Start with small changes to see how they affect your system
+4. You can undo most tweaks using the built-in undo feature
 
 ## Using the Application
 
-Once launched:
-1. The main menu will appear
-2. Choose "Browse and Apply Tweaks" to apply modifications
-3. Choose "Browse and Undo Tweaks" to revert changes
-4. Follow the on-screen prompts
-5. Tweaks are organized by category for easy navigation
+Once launched as administrator:
+
+1. **Main Menu** appears with options
+2. **Select** "Browse and Apply Tweaks" to make changes
+3. **Select** "Browse and Undo Tweaks" to revert changes
+4. **Follow** the on-screen prompts
+5. **Tweaks** are organized by category (Minimum, Recommended, Gaming)
+
+Each tweak shows:
+- What it does
+- Why you might want it
+- How to undo it
+
+## Troubleshooting
+
+### "This app can't run on your PC"
+
+**Possible causes:**
+- Wrong version for your Windows (32-bit vs 64-bit)
+- Incompatible Windows version (needs Windows 10/11)
+
+**Solution:**
+- Check your Windows version (Settings ? System ? About)
+- Request the correct version from the distributor
+
+### Application Won't Start
+
+**Try these steps:**
+1. Make sure you're running as administrator
+2. Check Windows Event Viewer for error details
+3. Temporarily disable antivirus
+4. Redownload the file (may be corrupted)
+
+### "Configuration file not found" Error
+
+**This should NOT happen** with the single-file version!
+
+If you see this:
+- The file may be corrupted
+- Request a fresh copy from the distributor
+
+### Application is Slow to Start
+
+**Normal behavior:**
+- First launch: 10-15 seconds (extracting embedded files)
+- Subsequent launches: 2-5 seconds
+- This is normal for single-file executables
+
+## Portability
+
+### Can I run it from a USB drive?
+**Yes!** Just copy the exe to the USB drive and run it.
+
+### Can I copy it to multiple PCs?
+**Yes!** The same file works on any compatible Windows PC.
+
+### Do I need internet?
+**No!** Everything is self-contained.
+
+### Can I move it after running?
+**Yes!** You can move or rename it anytime.
+
+## Sharing with Others
+
+If you want to share this with others:
+
+1. **Copy** the `C#TweaksPs1.exe` file
+2. **Share** via USB, email, network, cloud storage, etc.
+3. **Tell them** to run as administrator
+4. **Remind them** it needs admin rights to work
+
+That's it! No need to zip files or include folders.
+
+## Performance Note
+
+The single file is large (~100 MB) because it includes:
+- Complete .NET runtime
+- All program dependencies  
+- Embedded configuration
+
+This makes it portable and easy to distribute, but takes a moment to start.
 
 ## Need Help?
 
 If you need assistance:
-1. Check this guide first
-2. Review error messages carefully
-3. Contact your IT support or the person who provided this application
-4. For technical details, see the full documentation in the project repository
+1. Make sure you're running as administrator
+2. Check the error message carefully
+3. Contact your IT support or the person who gave you this file
+4. For developers: Check the GitHub repository documentation
+
+## Version Information
+
+To check what version you have:
+1. Right-click `C#TweaksPs1.exe`
+2. Select "Properties"
+3. Go to "Details" tab
+4. Check "File version"
+
+## Advanced: Custom Configuration
+
+If you want to use a custom tweak configuration:
+
+1. Create a folder named `config` next to the executable
+2. Place your custom `tweaks.json` file in that folder
+3. The application will use your custom config instead of embedded
+
+This is optional - most users don't need this!
+
+## Summary
+
+? **It's really this simple:**
+1. Get the file: `C#TweaksPs1.exe`
+2. Right-click ? Run as administrator
+3. Use the application
+
+No installation, no setup, no configuration needed!
 
 ---
 
 **Made with ?? for Windows power users**
+
+**Questions?** Contact the person who shared this with you or check the GitHub repository.

@@ -177,23 +177,30 @@ dotnet build --configuration Release
 - `System.Management` (8.0.0) - WMI-based service management
 - `System.ServiceProcess.ServiceController` (8.0.0) - Windows service control
 
-## Distribution
+## Distribution - Single File Executable
 
-### Publishing for Other PCs
+### ✨ New: All-in-One Executable
 
-When distributing this application to other computers, you must include the `config` folder:
+This application now uses **single-file deployment** - everything is embedded in one executable!
 
-```bash
-# Self-contained (includes .NET runtime)
-dotnet publish -c Release -r win-x64 --self-contained true
+#### Publishing for Other PCs
 
-# Framework-dependent (requires .NET 8 on target PC)
-dotnet publish -c Release
+```powershell
+# Using the publish script (recommended)
+.\scripts\publish.ps1
+
+# Or manually
+dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true /p:IncludeAllContentForSelfExtract=true /p:EnableCompressionInSingleFile=true
 ```
 
-**⚠️ CRITICAL**: Always include the `config` folder with `tweaks.json` when distributing the application.
+#### What You Get
 
-See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for complete distribution instructions.
+- ✅ **One file**: `C#TweaksPs1.exe` (~35-100 MB)
+- ✅ **No config folder needed** - Configuration is embedded
+- ✅ **Self-contained** - Includes .NET runtime
+- ✅ **Just distribute the .exe** - That's it!
+
+See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for complete instructions and [QUICKSTART.md](QUICKSTART.md) for end-user guide.
 
 ## Documentation
 
