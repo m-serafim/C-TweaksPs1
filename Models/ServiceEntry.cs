@@ -13,9 +13,15 @@ namespace C_TweaksPs1.Models
         [JsonPropertyName("Name")]
         public string Name { get; set; } = string.Empty;
 
+        /// <summary>
+        /// The startup type to set for the service when applying the tweak (Automatic, Manual, Disabled).
+        /// </summary>
         [JsonPropertyName("StartupType")]
         public string StartupType { get; set; } = string.Empty;
 
+        /// <summary>
+        /// The original startup type to restore when undoing the tweak.
+        /// </summary>
         [JsonPropertyName("OriginalType")]
         public string OriginalType { get; set; } = string.Empty;
     }
