@@ -28,7 +28,10 @@ namespace C_TweaksPs1.Core
                     throw new FileNotFoundException($"Configuration file not found: {path}");
                 }
 
+                // Read JSON file with proper error handling
                 var jsonContent = File.ReadAllText(path);
+                
+                // Configure JSON deserialization options for flexibility
                 var options = new JsonSerializerOptions
                 {
                     PropertyNameCaseInsensitive = true,
@@ -36,6 +39,7 @@ namespace C_TweaksPs1.Core
                     AllowTrailingCommas = true
                 };
 
+                // Deserialize JSON into tweak dictionary
                 var tweaks = JsonSerializer.Deserialize<Dictionary<string, Tweak>>(jsonContent, options);
                 
                 if (tweaks == null || tweaks.Count == 0)
