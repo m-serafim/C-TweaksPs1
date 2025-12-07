@@ -9,6 +9,12 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <SupportedOSPlatform>windows</SupportedOSPlatform>
     <NoWarn>CA1416</NoWarn>
+    <!-- Enable single-file publishing -->
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,8 +23,16 @@
     <PackageReference Include="System.ServiceProcess.ServiceController" Version="8.0.0" />
   </ItemGroup>
 
+  <!-- Embed config file as embedded resource -->
   <ItemGroup>
-    <None Update="config\tweaks.json">
+    <EmbeddedResource Include="config\tweaks.json">
+      <LogicalName>tweaks.json</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <!-- For development builds, copy files to output -->
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <None Update="config\**\*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

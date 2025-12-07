@@ -40,11 +40,15 @@ namespace C_TweaksPs1.UI
                         UseShellExecute = true,
                         FileName = Environment.ProcessPath ?? System.Reflection.Assembly.GetExecutingAssembly().Location,
                         Verb = "runas",
-                        Arguments = string.Join(" ", Environment.GetCommandLineArgs().Skip(1))
+                        Arguments = string.Join(" ", Environment.GetCommandLineArgs().Skip(1)),
+                        WindowStyle = ProcessWindowStyle.Normal
                     };
 
-                    Process.Start(processInfo);
-                    Environment.Exit(0);
+                    var process = Process.Start(processInfo);
+                    if (process != null)
+                    {
+                        Environment.Exit(0);
+                    }
                 }
                 catch (System.ComponentModel.Win32Exception)
                 {

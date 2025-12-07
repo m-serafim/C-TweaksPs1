@@ -177,6 +177,24 @@ dotnet build --configuration Release
 - `System.Management` (8.0.0) - WMI-based service management
 - `System.ServiceProcess.ServiceController` (8.0.0) - Windows service control
 
+## Distribution
+
+### Publishing for Other PCs
+
+When distributing this application to other computers, you must include the `config` folder:
+
+```bash
+# Self-contained (includes .NET runtime)
+dotnet publish -c Release -r win-x64 --self-contained true
+
+# Framework-dependent (requires .NET 8 on target PC)
+dotnet publish -c Release
+```
+
+**⚠️ CRITICAL**: Always include the `config` folder with `tweaks.json` when distributing the application.
+
+See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for complete distribution instructions.
+
 ## Documentation
 
 See [README_APP.md](README_APP.md) for detailed documentation including:
