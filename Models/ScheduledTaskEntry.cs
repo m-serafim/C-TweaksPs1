@@ -19,6 +19,9 @@ namespace C_TweaksPs1.Models
         [JsonPropertyName("State")]
         public string State { get; set; } = string.Empty;
 
+        /// <summary>
+        /// The original state to restore when undoing the tweak.
+        /// </summary>
         [JsonPropertyName("OriginalState")]
         public string OriginalState { get; set; } = string.Empty;
     }
