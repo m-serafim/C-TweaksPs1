@@ -2280,7 +2280,7 @@
     "category": "Essential Tweaks",
     "panel": "1",
     "Checked": "False",
-    "Order": "a001_"
+    "Order": "a001_",
     "link": "https://winutil.christitus.com/dev/tweaks/essential-tweaks/restorepoint"
   },
   "WPFTweaksEndTaskOnTaskbar": {
