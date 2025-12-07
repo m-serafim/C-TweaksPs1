@@ -2,7 +2,7 @@
   "WPFTweaksActivity": {
     "Content": "Disable Activity History",
     "Description": "This erases recent docs, clipboard, and run history.",
-    "category": "Essential Tweaks",
+    "category": "🔹 Minimum",
     "panel": "1",
     "Order": "a005_",
     "registry": [
@@ -33,9 +33,9 @@
   "WPFTweaksHiber": {
     "Content": "Disable Hibernation",
     "Description": "Hibernation is really meant for laptops as it saves what's in memory before turning the pc off. It really should never be used, but some people are lazy and rely on it. Don't be like Bob. Bob likes hibernation.",
-    "category": "Essential Tweaks",
-    "panel": "1",
-    "Order": "a005_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b005_",
     "registry": [
       {
         "Path": "HKLM:\\System\\CurrentControlSet\\Control\\Session Manager\\Power",
@@ -63,9 +63,9 @@
   "WPFTweaksLaptopHibernation": {
     "Content": "Set Hibernation as default (good for laptops)",
     "Description": "Most modern laptops have connected standby enabled which drains the battery, this sets hibernation as default which will not drain the battery. See issue https://github.com/ChrisTitusTech/winutil/issues/1399",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a027_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b027_",
     "registry": [
       {
         "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Power\\PowerSettings\\238C9FA8-0AAD-41ED-83F4-97BE242C8F20\\7bc4a2f9-d8fc-4469-b07b-33eb785aaca0",
@@ -77,7 +77,7 @@
       {
         "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Power\\PowerSettings\\abfc2519-3608-4c2a-94ea-171b0ed546ab\\94ac6d29-73ce-41a6-809f-6363ba21b47e",
         "OriginalValue": "0",
-        "Name": "Attributes ",
+        "Name": "Attributes",
         "Value": "2",
         "Type": "DWord"
       }
@@ -93,7 +93,7 @@
   "WPFTweaksLoc": {
     "Content": "Disable Location Tracking",
     "Description": "Disables Location Tracking...DUH!",
-    "category": "Essential Tweaks",
+    "category": "🔹 Minimum",
     "panel": "1",
     "Order": "a005_",
     "registry": [
@@ -131,9 +131,9 @@
   "WPFTweaksServices": {
     "Content": "Set Services to Manual",
     "Description": "Turns a bunch of system services to manual that don't need to be running all the time. This is pretty harmless as if the service is needed, it will simply start on demand.",
-    "category": "Essential Tweaks",
-    "panel": "1",
-    "Order": "a014_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b014_",
     "service": [
       {
         "Name": "AJRouter",
@@ -1516,32 +1516,32 @@
   "WPFTweaksBraveDebloat": {
     "Content": "Brave Debloat",
     "Description": "Disables various annoyances like Brave Rewards,Leo AI,Crypto Wallet and VPN",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a022_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b022_",
     "registry": [
       {
-        "Path":"HKLM:\\SOFTWARE\\Policies\\BraveSoftware\\Brave",
+        "Path": "HKLM:\\SOFTWARE\\Policies\\BraveSoftware\\Brave",
         "Name": "BraveRewardsDisabled",
         "Type": "DWord",
         "Value": "1",
         "OriginalValue": "<RemoveEntry>"
       },
-            {
+      {
         "Path": "HKLM:\\SOFTWARE\\Policies\\BraveSoftware\\Brave",
         "Name": "BraveWalletDisabled",
         "Type": "DWord",
         "Value": "1",
         "OriginalValue": "<RemoveEntry>"
       },
-            {
+      {
         "Path": "HKLM:\\SOFTWARE\\Policies\\BraveSoftware\\Brave",
         "Name": "BraveVPNDisabled",
         "Type": "DWord",
         "Value": "1",
         "OriginalValue": "<RemoveEntry>"
       },
-            {
+      {
         "Path": "HKLM:\\SOFTWARE\\Policies\\BraveSoftware\\Brave",
         "Name": "BraveAIChatEnabled",
         "Type": "DWord",
@@ -1553,9 +1553,9 @@
   "WPFTweaksEdgeDebloat": {
     "Content": "Edge Debloat",
     "Description": "Disables various telemetry options, popups, and other annoyances in Edge.",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a022_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b022_",
     "registry": [
       {
         "Path": "HKLM:\\SOFTWARE\\Policies\\Microsoft\\EdgeUpdate",
@@ -1668,7 +1668,7 @@
   "WPFTweaksConsumerFeatures": {
     "Content": "Disable ConsumerFeatures",
     "Description": "Windows 10 will not automatically install any games, third-party apps, or application links from the Windows Store for the signed-in user. Some default Apps will be inaccessible (eg. Phone Link)",
-    "category": "Essential Tweaks",
+    "category": "🔹 Minimum",
     "panel": "1",
     "Order": "a003_",
     "registry": [
@@ -1685,7 +1685,7 @@
   "WPFTweaksTele": {
     "Content": "Disable Telemetry",
     "Description": "Disables Microsoft Telemetry. Note: This will lock many Edge Browser settings. Microsoft spies heavily on you when using the Edge browser.",
-    "category": "Essential Tweaks",
+    "category": "🔹 Minimum",
     "panel": "1",
     "Order": "a003_",
     "ScheduledTask": [
@@ -2014,7 +2014,7 @@
   "WPFTweaksWifi": {
     "Content": "Disable Wi-Fi Sense",
     "Description": "Wi-Fi Sense is a spying service that phones home all nearby scanned Wi-Fi networks and your current geographic location.",
-    "category": "Essential Tweaks",
+    "category": "🔹 Minimum",
     "panel": "1",
     "Order": "a005_",
     "registry": [
@@ -2038,9 +2038,9 @@
   "WPFTweaksDisableEdge": {
     "Content": "Disable Edge",
     "Description": "Disables Microsoft Edge via the registry and prevents scheduled tasks from running Edge updates.",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a023_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b023_",
     "registry": [
       {
         "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\DisallowRun",
@@ -2062,9 +2062,9 @@
   "WPFTweaksUTC": {
     "Content": "Set Time to UTC (Dual Boot)",
     "Description": "Essential for computers that are dual booting. Fixes the time sync with Linux Systems.",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a027_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b027_",
     "registry": [
       {
         "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\TimeZoneInformation",
@@ -2079,25 +2079,25 @@
   "WPFTweaksRemoveHome": {
     "Content": "Remove Home from Explorer",
     "Description": "Removes the Home from Explorer and sets This PC as default",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a029_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b029_",
     "link": "https://winutil.christitus.com/dev/tweaks/z--advanced-tweaks---caution/removehomegallery"
   },
   "WPFTweaksRemoveGallery": {
     "Content": "Remove Gallery from explorer",
     "Description": "Removes the Gallery from Explorer and sets This PC as default",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a030_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b030_",
     "link": "https://winutil.christitus.com/dev/tweaks/z--advanced-tweaks---caution/removehomegallery"
   },
   "WPFTweaksDisplay": {
     "Content": "Set Display for Performance",
     "Description": "Sets the system preferences to performance. You can do this manually with sysdm.cpl as well.",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a027_",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c027_",
     "registry": [
       {
         "Path": "HKCU:\\Control Panel\\Desktop",
@@ -2202,9 +2202,9 @@
   "WPFTweaksDeBloat": {
     "Content": "Remove ALL MS Store Apps - NOT RECOMMENDED",
     "Description": "USE WITH CAUTION!!!!! This will remove ALL Microsoft store apps other than the essentials to make winget work. Games installed by MS Store ARE INCLUDED!",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a028_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b028_",
     "appx": [
       "Microsoft.Microsoft3DViewer",
       "Microsoft.AppConnector",
@@ -2277,16 +2277,16 @@
   "WPFTweaksRestorePoint": {
     "Content": "Create Restore Point",
     "Description": "Creates a restore point at runtime in case a revert is needed from WinUtil modifications",
-    "category": "Essential Tweaks",
-    "panel": "1",
+    "category": "⭐ Recommended",
+    "panel": "2",
     "Checked": "False",
-    "Order": "a001_",
+    "Order": "b001_",
     "link": "https://winutil.christitus.com/dev/tweaks/essential-tweaks/restorepoint"
   },
   "WPFTweaksEndTaskOnTaskbar": {
     "Content": "Enable End Task With Right Click",
     "Description": "Enables option to end task when right clicking a program in the taskbar",
-    "category": "Essential Tweaks",
+    "category": "🔹 Minimum",
     "panel": "1",
     "Order": "a006_",
     "registry": [
@@ -2303,9 +2303,9 @@
   "WPFTweaksPowershell7": {
     "Content": "Change Windows Terminal default: PowerShell 5 -> PowerShell 7",
     "Description": "This will edit the config file of the Windows Terminal replacing PowerShell 5 with PowerShell 7 and installing PS7 if necessary",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a022_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b022_",
     "InvokeScript": [
       "Invoke-WPFTweakPS7 -action \"PS7\""
     ],
@@ -2317,7 +2317,7 @@
   "WPFTweaksPowershell7Tele": {
     "Content": "Disable Powershell 7 Telemetry",
     "Description": "This will create an Environment Variable called 'POWERSHELL_TELEMETRY_OPTOUT' with a value of '1' which will tell Powershell 7 to not send Telemetry Data.",
-    "category": "Essential Tweaks",
+    "category": "🔹 Minimum",
     "panel": "1",
     "Order": "a009_",
     "InvokeScript": [
@@ -2331,7 +2331,7 @@
   "WPFTweaksStorage": {
     "Content": "Disable Storage Sense",
     "Description": "Storage Sense deletes temp files automatically.",
-    "category": "Essential Tweaks",
+    "category": "🔹 Minimum",
     "panel": "1",
     "Order": "a005_",
     "registry": [
@@ -2348,9 +2348,9 @@
   "WPFTweaksRemoveCopilot": {
     "Content": "Disable Microsoft Copilot",
     "Description": "Disables MS Copilot AI built into Windows since 23H2.",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a025_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b025_",
     "registry": [
       {
         "Path": "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsCopilot",
@@ -2414,9 +2414,9 @@
   "WPFTweaksRecallOff": {
     "Content": "Disable Recall",
     "Description": "Turn Recall off",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a025_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b025_",
     "registry": [
       {
         "Path": "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\WindowsAI",
@@ -2445,17 +2445,17 @@
   "WPFTweaksDisableLMS1": {
     "Content": "Disable Intel MM (vPro LMS)",
     "Description": "Intel LMS service is always listening on all ports and could be a huge security risk. There is no need to run LMS on home machines and even in the Enterprise there are better solutions.",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a026_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b026_",
     "link": "https://winutil.christitus.com/dev/tweaks/z--advanced-tweaks---caution/disablelms1"
   },
   "WPFTweaksDisableWpbtExecution": {
     "Content": "Disable Windows Platform Binary Table (WPBT)",
     "Description": "If enabled then allows your computer vendor to execute a program each time it boots. It enables computer vendors to force install anti-theft software, software drivers, or a software program conveniently. This could also be a security risk.",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a027_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b027_",
     "registry": [
       {
         "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager",
@@ -2469,17 +2469,17 @@
   "WPFTweaksRemoveOnedrive": {
     "Content": "Remove OneDrive",
     "Description": "Moves OneDrive files to Default Home Folders and Uninstalls it.",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a031_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b031_",
     "link": "https://winutil.christitus.com/dev/tweaks/z--advanced-tweaks---caution/removeonedrive"
   },
   "WPFTweaksRazerBlock": {
     "Content": "Block Razer Software Installs",
     "Description": "Blocks ALL Razer Software installations. The hardware works fine without any software. WARNING: this will also block all Windows third-party driver installations.",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a021_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b021_",
     "registry": [
       {
         "Path": "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\DriverSearching",
@@ -2501,9 +2501,9 @@
   "WPFTweaksDisableNotifications": {
     "Content": "Disable Notification Tray/Calendar",
     "Description": "Disables all Notifications INCLUDING Calendar",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a026_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b026_",
     "registry": [
       {
         "Path": "HKCU:\\Software\\Policies\\Microsoft\\Windows\\Explorer",
@@ -2525,9 +2525,9 @@
   "WPFTweaksDebloatAdobe": {
     "Content": "Adobe Debloat",
     "Description": "Manages Adobe Services, Adobe Desktop Service, and Acrobat Updates",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a021_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b021_",
     "service": [
       {
         "Name": "AGSService",
@@ -2585,41 +2585,41 @@
   "WPFTweaksBlockAdobeNet": {
     "Content": "Adobe Network Block",
     "Description": "Reduce user interruptions by selectively blocking connections to Adobe's activation and telemetry servers. Credit: Ruddernation-Designs",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a021_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b021_",
     "link": "https://winutil.christitus.com/dev/tweaks/z--advanced-tweaks---caution/blockadobenet"
   },
   "WPFTweaksRightClickMenu": {
     "Content": "Set Classic Right-Click Menu ",
     "Description": "Great Windows 11 tweak to bring back good context menus when right clicking things in explorer.",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a027_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b027_",
     "link": "https://winutil.christitus.com/dev/tweaks/z--advanced-tweaks---caution/rightclickmenu"
   },
   "WPFTweaksDiskCleanup": {
     "Content": "Run Disk Cleanup",
     "Description": "Runs Disk Cleanup on Drive C: and removes old Windows Updates.",
-    "category": "Essential Tweaks",
-    "panel": "1",
-    "Order": "a009_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b009_",
     "link": "https://winutil.christitus.com/dev/tweaks/essential-tweaks/diskcleanup"
   },
   "WPFTweaksDeleteTempFiles": {
     "Content": "Delete Temporary Files",
     "Description": "Erases TEMP Folders",
-    "category": "Essential Tweaks",
-    "panel": "1",
-    "Order": "a002_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b002_",
     "link": "https://winutil.christitus.com/dev/tweaks/essential-tweaks/deletetempfiles"
   },
   "WPFTweaksDVR": {
     "Content": "Disable GameDVR",
     "Description": "GameDVR is a Windows App that is a dependency for some Store Games. I've never met someone that likes it, but it's there for the XBOX crowd.",
-    "category": "Essential Tweaks",
-    "panel": "1",
-    "Order": "a005_",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c005_",
     "registry": [
       {
         "Path": "HKCU:\\System\\GameConfigStore",
@@ -2662,9 +2662,9 @@
   "WPFTweaksIPv46": {
     "Content": "Prefer IPv4 over IPv6",
     "Description": "To set the IPv4 preference can have latency and security benefits on private networks where IPv6 is not configured.",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a024_",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c024_",
     "registry": [
       {
         "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Tcpip6\\Parameters",
@@ -2679,9 +2679,9 @@
   "WPFTweaksTeredo": {
     "Content": "Disable Teredo",
     "Description": "Teredo network tunneling is a ipv6 feature that can cause additional latency, but may cause problems with some games",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a024_",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c024_",
     "registry": [
       {
         "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Tcpip6\\Parameters",
@@ -2702,9 +2702,9 @@
   "WPFTweaksDisableipsix": {
     "Content": "Disable IPv6",
     "Description": "Disables IPv6.",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a024_",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c024_",
     "registry": [
       {
         "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Tcpip6\\Parameters",
@@ -2725,9 +2725,9 @@
   "WPFTweaksDisableBGapps": {
     "Content": "Disable Background Apps",
     "Description": "Disables all Microsoft Store apps from running in the background, which has to be done individually since Win11",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a024_",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c024_",
     "registry": [
       {
         "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\BackgroundAccessApplications",
@@ -2742,9 +2742,9 @@
   "WPFTweaksDisableFSO": {
     "Content": "Disable Fullscreen Optimizations",
     "Description": "Disables FSO in all applications. NOTE: This will disable Color Management in Exclusive Fullscreen",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a024_",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c024_",
     "registry": [
       {
         "Path": "HKCU:\\System\\GameConfigStore",
@@ -2759,8 +2759,8 @@
   "WPFToggleDarkMode": {
     "Content": "Dark Theme for Windows",
     "Description": "Enable/Disable Dark Mode.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a100_",
     "Type": "Toggle",
     "registry": [
@@ -2786,8 +2786,8 @@
   "WPFToggleBingSearch": {
     "Content": "Bing Search in Start Menu",
     "Description": "If enable then includes web search results from Bing in your Start Menu search.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a101_",
     "Type": "Toggle",
     "registry": [
@@ -2805,8 +2805,8 @@
   "WPFToggleNumLock": {
     "Content": "NumLock on Startup",
     "Description": "Toggle the Num Lock key state when your computer starts.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a102_",
     "Type": "Toggle",
     "registry": [
@@ -2832,8 +2832,8 @@
   "WPFToggleVerboseLogon": {
     "Content": "Verbose Messages During Logon",
     "Description": "Show detailed messages during the login process for troubleshooting and diagnostics.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a103_",
     "Type": "Toggle",
     "registry": [
@@ -2851,8 +2851,8 @@
   "WPFToggleStartMenuRecommendations": {
     "Content": "Recommendations in Start Menu",
     "Description": "If disabled then you will not see recommendations in the Start Menu. | Enables 'iseducationenvironment' | Relogin Required. | WARNING: This will also disable Windows Spotlight on your Lock Screen as a side effect.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a104_",
     "Type": "Toggle",
     "registry": [
@@ -2886,8 +2886,8 @@
   "WPFToggleHideSettingsHome": {
     "Content": "Remove Settings Home Page",
     "Description": "Removes the Home page in the Windows Settings app.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a105_",
     "Type": "Toggle",
     "registry": [
@@ -2904,8 +2904,8 @@
   "WPFToggleSnapWindow": {
     "Content": "Snap Window",
     "Description": "If enabled you can align windows by dragging them. | Relogin Required",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a106_",
     "Type": "Toggle",
     "registry": [
@@ -2923,8 +2923,8 @@
   "WPFToggleSnapFlyout": {
     "Content": "Snap Assist Flyout",
     "Description": "If disabled then Snap preview is disabled when maximize button is hovered.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a107_",
     "Type": "Toggle",
     "registry": [
@@ -2942,8 +2942,8 @@
   "WPFToggleSnapSuggestion": {
     "Content": "Snap Assist Suggestion",
     "Description": "If enabled then you will get suggestions to snap other applications in the left over spaces.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a108_",
     "Type": "Toggle",
     "registry": [
@@ -2961,8 +2961,8 @@
   "WPFToggleMouseAcceleration": {
     "Content": "Mouse Acceleration",
     "Description": "If Enabled then Cursor movement is affected by the speed of your physical mouse movements.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a109_",
     "Type": "Toggle",
     "registry": [
@@ -2996,8 +2996,8 @@
   "WPFToggleStickyKeys": {
     "Content": "Sticky Keys",
     "Description": "If Enabled then Sticky Keys is activated - Sticky keys is an accessibility feature of some graphical user interfaces which assists users who have physical disabilities or help users reduce repetitive strain injury.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a110_",
     "Type": "Toggle",
     "registry": [
@@ -3015,8 +3015,8 @@
   "WPFToggleNewOutlook": {
     "Content": "New Outlook",
     "Description": "If disabled it removes the toggle for new Outlook, disables the new Outlook migration and makes sure the Outlook Application actually uses the old Outlook.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a112_",
     "Type": "Toggle",
     "registry": [
@@ -3055,13 +3055,12 @@
     ],
     "link": "https://winutil.christitus.com/dev/tweaks/customize-preferences/newoutlook"
   },
-
   "WPFToggleMultiplaneOverlay": {
     "Content": "Disable Multiplane Overlay",
     "Description": "Disable the Multiplane Overlay which can sometimes cause issues with Graphics Cards.",
-    "category": "Customize Preferences",
-    "panel": "2",
-    "Order": "a111_",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c111_",
     "Type": "Toggle",
     "registry": [
       {
@@ -3078,8 +3077,8 @@
   "WPFToggleHiddenFiles": {
     "Content": "Show Hidden Files",
     "Description": "If Enabled then Hidden Files will be shown.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a200_",
     "Type": "Toggle",
     "registry": [
@@ -3097,8 +3096,8 @@
   "WPFToggleShowExt": {
     "Content": "Show File Extensions",
     "Description": "If enabled then File extensions (e.g., .txt, .jpg) are visible.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a201_",
     "Type": "Toggle",
     "registry": [
@@ -3116,8 +3115,8 @@
   "WPFToggleTaskbarSearch": {
     "Content": "Search Button in Taskbar",
     "Description": "If Enabled Search Button will be on the taskbar.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a202_",
     "Type": "Toggle",
     "registry": [
@@ -3135,8 +3134,8 @@
   "WPFToggleTaskView": {
     "Content": "Task View Button in Taskbar",
     "Description": "If Enabled then Task View Button in Taskbar will be shown.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a203_",
     "Type": "Toggle",
     "registry": [
@@ -3154,8 +3153,8 @@
   "WPFToggleTaskbarWidgets": {
     "Content": "Widgets Button in Taskbar",
     "Description": "If Enabled then Widgets Button in Taskbar will be shown.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a204_",
     "Type": "Toggle",
     "registry": [
@@ -3173,8 +3172,8 @@
   "WPFToggleTaskbarAlignment": {
     "Content": "Center Taskbar Items",
     "Description": "[Windows 11] If Enabled then the Taskbar Items will be shown on the Center, otherwise the Taskbar Items will be shown on the Left.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a204_",
     "Type": "Toggle",
     "registry": [
@@ -3192,8 +3191,8 @@
   "WPFToggleDetailedBSoD": {
     "Content": "Detailed BSoD",
     "Description": "If Enabled then you will see a detailed Blue Screen of Death (BSOD) with more information.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a205_",
     "Type": "Toggle",
     "registry": [
@@ -3219,9 +3218,9 @@
   "WPFToggleS3Sleep": {
     "Content": "S3 Sleep",
     "Description": "Toggles between Modern Standby and S3 sleep.",
-    "category": "Customize Preferences",
+    "category": "⭐ Recommended",
     "panel": "2",
-    "Order": "a206_",
+    "Order": "b206_",
     "Type": "Toggle",
     "registry": [
       {
@@ -3236,35 +3235,35 @@
   },
   "WPFOOSUbutton": {
     "Content": "Run OO Shutup 10",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a039_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b039_",
     "Type": "Button",
     "link": "https://winutil.christitus.com/dev/tweaks/z--advanced-tweaks---caution/oosubutton"
   },
   "WPFchangedns": {
     "Content": "DNS",
-    "category": "z__Advanced Tweaks - CAUTION",
-    "panel": "1",
-    "Order": "a040_",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b040_",
     "Type": "Combobox",
     "ComboItems": "Default DHCP Google Cloudflare Cloudflare_Malware Cloudflare_Malware_Adult Open_DNS Quad9 AdGuard_Ads_Trackers AdGuard_Ads_Trackers_Malware_Adult",
     "link": "https://winutil.christitus.com/dev/tweaks/z--advanced-tweaks---caution/changedns"
   },
   "WPFAddUltPerf": {
     "Content": "Add and Activate Ultimate Performance Profile",
-    "category": "Performance Plans",
+    "category": "⭐ Recommended",
     "panel": "2",
-    "Order": "a080_",
+    "Order": "b080_",
     "Type": "Button",
     "ButtonWidth": "300",
     "link": "https://winutil.christitus.com/dev/tweaks/performance-plans/addultperf"
   },
   "WPFRemoveUltPerf": {
     "Content": "Remove Ultimate Performance Profile",
-    "category": "Performance Plans",
+    "category": "⭐ Recommended",
     "panel": "2",
-    "Order": "a081_",
+    "Order": "b081_",
     "Type": "Button",
     "ButtonWidth": "300",
     "link": "https://winutil.christitus.com/dev/tweaks/performance-plans/removeultperf"
@@ -3272,15 +3271,15 @@
   "WPFTweaksDisableExplorerAutoDiscovery": {
     "Content": "Disable Explorer Automatic Folder Discovery",
     "Description": "Windows Explorer automatically tries to guess the type of the folder based on its contents, slowing down the browsing experience.",
-    "category": "Essential Tweaks",
-    "panel": "1",
-    "Order": "a005_"
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b005_"
   },
   "WPFToggleDisableCrossDeviceResume": {
     "Content": "Cross-Device Resume",
     "Description": "This tweak controls the Resume function in Windows 11 24H2 and later, which allows you to resume an activity from a mobile device and vice-versa.",
-    "category": "Customize Preferences",
-    "panel": "2",
+    "category": "🔹 Minimum",
+    "panel": "1",
     "Order": "a207_",
     "Type": "Toggle",
     "registry": [
@@ -3291,6 +3290,478 @@
         "OriginalValue": "0",
         "DefaultState": "true",
         "Type": "DWord"
+      }
+    ]
+  },
+  "WPFTweaksGameMode": {
+    "Content": "Enable Game Mode",
+    "Description": "Optimizes Windows for gaming by prioritizing game processes and reducing background activity.",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c001_",
+    "registry": [
+      {
+        "Path": "HKCU:\\Software\\Microsoft\\GameBar",
+        "Name": "AutoGameModeEnabled",
+        "Type": "DWord",
+        "Value": "1",
+        "OriginalValue": "0"
+      },
+      {
+        "Path": "HKCU:\\Software\\Microsoft\\GameBar",
+        "Name": "AllowAutoGameMode",
+        "Type": "DWord",
+        "Value": "1",
+        "OriginalValue": "0"
+      }
+    ]
+  },
+  "WPFTweaksHighPerformancePlan": {
+    "Content": "Enable High Performance Power Plan",
+    "Description": "Switches to the High Performance power plan for maximum system performance.",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b020_",
+    "InvokeScript": [
+      "powercfg.exe /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c"
+    ],
+    "UndoScript": [
+      "powercfg.exe /setactive 381b4222-f694-41f0-9685-ff5bb260df2e"
+    ]
+  },
+  "WPFTweaksUltimatePerformance": {
+    "Content": "Enable Ultimate Performance Power Plan",
+    "Description": "Activates the Ultimate Performance power plan for maximum performance on high-end systems.",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c002_",
+    "InvokeScript": [
+      "powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61",
+      "powercfg.exe /setactive e9a42b02-d5df-448d-aa00-03f14749eb61"
+    ],
+    "UndoScript": [
+      "powercfg.exe /setactive 381b4222-f694-41f0-9685-ff5bb260df2e"
+    ]
+  },
+  "WPFTweaksDisableFastStartup": {
+    "Content": "Disable Fast Startup",
+    "Description": "Disables Fast Startup to prevent potential boot issues and ensure clean system starts.",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b006_",
+    "registry": [
+      {
+        "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Power",
+        "Name": "HiberbootEnabled",
+        "Type": "DWord",
+        "Value": "0",
+        "OriginalValue": "1"
+      }
+    ]
+  },
+  "WPFTweaksDisableAnimations": {
+    "Content": "Disable Window Animations",
+    "Description": "Disables visual animations for faster system responsiveness.",
+    "category": "🔹 Minimum",
+    "panel": "1",
+    "Order": "a010_",
+    "registry": [
+      {
+        "Path": "HKCU:\\Control Panel\\Desktop\\WindowMetrics",
+        "Name": "MinAnimate",
+        "Type": "String",
+        "Value": "0",
+        "OriginalValue": "1"
+      },
+      {
+        "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced",
+        "Name": "TaskbarAnimations",
+        "Type": "DWord",
+        "Value": "0",
+        "OriginalValue": "1"
+      }
+    ]
+  },
+  "WPFTweaksDisableTransparency": {
+    "Content": "Disable Transparency Effects",
+    "Description": "Disables transparency effects to improve performance and reduce GPU usage.",
+    "category": "🔹 Minimum",
+    "panel": "1",
+    "Order": "a011_",
+    "registry": [
+      {
+        "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize",
+        "Name": "EnableTransparency",
+        "Type": "DWord",
+        "Value": "0",
+        "OriginalValue": "1"
+      }
+    ]
+  },
+  "WPFTweaksBestPerformance": {
+    "Content": "Adjust for Best Performance",
+    "Description": "Configures visual effects for best performance by disabling unnecessary visual features.",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b015_",
+    "registry": [
+      {
+        "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\VisualEffects",
+        "Name": "VisualFXSetting",
+        "Type": "DWord",
+        "Value": "2",
+        "OriginalValue": "0"
+      }
+    ]
+  },
+  "WPFTweaksCloudflare DNS": {
+    "Content": "Optimize DNS Settings (Cloudflare 1.1.1.1)",
+    "Description": "Sets DNS servers to Cloudflare (1.1.1.1 and 1.0.0.1) for faster and more private DNS resolution.",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b025_",
+    "InvokeScript": [
+      "$adapters = Get-NetAdapter | Where-Object {$_.Status -eq 'Up'}",
+      "foreach ($adapter in $adapters) {",
+      "    try {",
+      "        Set-DnsClientServerAddress -InterfaceIndex $adapter.ifIndex -ServerAddresses ('1.1.1.1','1.0.0.1')",
+      "    } catch {",
+      "        Write-Warning \"Failed to set DNS for $($adapter.Name): $_\"",
+      "    }",
+      "}"
+    ],
+    "UndoScript": [
+      "$adapters = Get-NetAdapter | Where-Object {$_.Status -eq 'Up'}",
+      "foreach ($adapter in $adapters) {",
+      "    Set-DnsClientServerAddress -InterfaceIndex $adapter.ifIndex -ResetServerAddresses",
+      "}"
+    ]
+  },
+  "WPFTweaksTCPOptimization": {
+    "Content": "TCP/IP Optimization",
+    "Description": "Optimizes TCP/IP settings for improved network performance and reduced latency.",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c010_",
+    "InvokeScript": [
+      "netsh int tcp set global autotuninglevel=normal",
+      "netsh int tcp set global chimney=enabled",
+      "netsh int tcp set global dca=enabled",
+      "netsh int tcp set global netdma=enabled",
+      "netsh int tcp set global ecncapability=enabled",
+      "netsh int tcp set global timestamps=disabled"
+    ],
+    "UndoScript": [
+      "netsh int tcp set global autotuninglevel=normal",
+      "netsh int tcp set global chimney=automatic",
+      "netsh int tcp set global dca=enabled",
+      "netsh int tcp set global netdma=enabled",
+      "netsh int tcp set global ecncapability=disabled",
+      "netsh int tcp set global timestamps=enabled"
+    ]
+  },
+  "WPFTweaksDisableNetworkThrottling": {
+    "Content": "Disable Network Throttling",
+    "Description": "Removes Windows network throttling to maximize network performance.",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c011_",
+    "registry": [
+      {
+        "Path": "HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Multimedia\\SystemProfile",
+        "Name": "NetworkThrottlingIndex",
+        "Type": "DWord",
+        "Value": "4294967295",
+        "OriginalValue": "10"
+      }
+    ]
+  },
+  "WPFTweaksHardwareGPUScheduling": {
+    "Content": "Enable Hardware Accelerated GPU Scheduling",
+    "Description": "Enables Hardware Accelerated GPU Scheduling for better GPU performance and lower latency.",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c005_",
+    "registry": [
+      {
+        "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\GraphicsDrivers",
+        "Name": "HwSchMode",
+        "Type": "DWord",
+        "Value": "2",
+        "OriginalValue": "1"
+      }
+    ]
+  },
+  "WPFTweaksEnableMSIMode": {
+    "Content": "Enable MSI Mode for GPU",
+    "Description": "Enables Message Signaled Interrupts for GPU to reduce latency and improve performance.",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c015_",
+    "InvokeScript": [
+      "$GPU = Get-PnpDevice | Where-Object {$_.Class -eq 'Display' -and $_.Status -eq 'OK'}",
+      "foreach ($device in $GPU) {",
+      "    $path = 'HKLM:\\SYSTEM\\CurrentControlSet\\Enum\\' + $device.InstanceId + '\\Device Parameters\\Interrupt Management\\MessageSignaledInterruptProperties'",
+      "    try {",
+      "        if (!(Test-Path $path)) {",
+      "            New-Item -Path $path -Force | Out-Null",
+      "        }",
+      "        Set-ItemProperty -Path $path -Name 'MSISupported' -Value 1 -Type DWord -Force",
+      "    } catch {",
+      "        Write-Warning \"Failed to enable MSI for $($device.Name): $_\"",
+      "    }",
+      "}"
+    ]
+  },
+  "WPFTweaksDisableSuperfetch": {
+    "Content": "Disable Superfetch/Prefetch",
+    "Description": "Disables Superfetch and Prefetch services to reduce disk usage, especially beneficial for SSDs.",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b030_",
+    "service": [
+      {
+        "Name": "SysMain",
+        "StartupType": "Disabled",
+        "OriginalType": "Automatic"
+      }
+    ],
+    "registry": [
+      {
+        "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters",
+        "Name": "EnablePrefetcher",
+        "Type": "DWord",
+        "Value": "0",
+        "OriginalValue": "3"
+      },
+      {
+        "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management\\PrefetchParameters",
+        "Name": "EnableSuperfetch",
+        "Type": "DWord",
+        "Value": "0",
+        "OriginalValue": "3"
+      }
+    ]
+  },
+  "WPFTweaksOptimizeVirtualMemory": {
+    "Content": "Optimize Virtual Memory",
+    "Description": "Optimizes virtual memory settings for better performance.",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b035_",
+    "registry": [
+      {
+        "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management",
+        "Name": "ClearPageFileAtShutdown",
+        "Type": "DWord",
+        "Value": "0",
+        "OriginalValue": "0"
+      },
+      {
+        "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management",
+        "Name": "DisablePagingExecutive",
+        "Type": "DWord",
+        "Value": "1",
+        "OriginalValue": "0"
+      },
+      {
+        "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Session Manager\\Memory Management",
+        "Name": "LargeSystemCache",
+        "Type": "DWord",
+        "Value": "0",
+        "OriginalValue": "0"
+      }
+    ]
+  },
+  "WPFTweaksDisableSearchIndexing": {
+    "Content": "Disable Search Indexing",
+    "Description": "Disables Windows Search indexing to reduce disk and CPU usage.",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b040_",
+    "service": [
+      {
+        "Name": "WSearch",
+        "StartupType": "Disabled",
+        "OriginalType": "Automatic"
+      }
+    ]
+  },
+  "WPFTweaksEnableTRIM": {
+    "Content": "Enable TRIM for SSD",
+    "Description": "Enables TRIM support for SSDs to maintain performance and longevity.",
+    "category": "⭐ Recommended",
+    "panel": "2",
+    "Order": "b045_",
+    "InvokeScript": [
+      "fsutil behavior set DisableDeleteNotify 0"
+    ],
+    "UndoScript": [
+      "fsutil behavior set DisableDeleteNotify 1"
+    ]
+  },
+  "WPFTweaksDisableTelemetryExtended": {
+    "Content": "Disable Telemetry & Data Collection",
+    "Description": "Comprehensively disables Windows telemetry and data collection services.",
+    "category": "🔹 Minimum",
+    "panel": "1",
+    "Order": "a003_",
+    "registry": [
+      {
+        "Path": "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection",
+        "Name": "AllowTelemetry",
+        "Type": "DWord",
+        "Value": "0",
+        "OriginalValue": "1"
+      },
+      {
+        "Path": "HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\DataCollection",
+        "Name": "AllowTelemetry",
+        "Type": "DWord",
+        "Value": "0",
+        "OriginalValue": "1"
+      }
+    ],
+    "service": [
+      {
+        "Name": "DiagTrack",
+        "StartupType": "Disabled",
+        "OriginalType": "Automatic"
+      },
+      {
+        "Name": "dmwappushservice",
+        "StartupType": "Disabled",
+        "OriginalType": "Manual"
+      }
+    ]
+  },
+  "WPFTweaksDisableBackgroundAppsExtended": {
+    "Content": "Disable Background Apps",
+    "Description": "Prevents apps from running in the background to conserve resources.",
+    "category": "🔹 Minimum",
+    "panel": "1",
+    "Order": "a008_",
+    "registry": [
+      {
+        "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\BackgroundAccessApplications",
+        "Name": "GlobalUserDisabled",
+        "Type": "DWord",
+        "Value": "1",
+        "OriginalValue": "0"
+      }
+    ]
+  },
+  "WPFTweaksDisableCortana": {
+    "Content": "Disable Cortana",
+    "Description": "Completely disables Cortana to free up system resources.",
+    "category": "🔹 Minimum",
+    "panel": "1",
+    "Order": "a009_",
+    "registry": [
+      {
+        "Path": "HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\Windows Search",
+        "Name": "AllowCortana",
+        "Type": "DWord",
+        "Value": "0",
+        "OriginalValue": "1"
+      },
+      {
+        "Path": "HKLM:\\SOFTWARE\\Microsoft\\PolicyManager\\default\\Experience\\AllowCortana",
+        "Name": "value",
+        "Type": "DWord",
+        "Value": "0",
+        "OriginalValue": "1"
+      }
+    ]
+  },
+  "WPFTweaksDisableWindowsTips": {
+    "Content": "Disable Windows Tips & Suggestions",
+    "Description": "Disables Windows tips, suggestions, and promotional content.",
+    "category": "🔹 Minimum",
+    "panel": "1",
+    "Order": "a012_",
+    "registry": [
+      {
+        "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager",
+        "Name": "SubscribedContent-338389Enabled",
+        "Type": "DWord",
+        "Value": "0",
+        "OriginalValue": "1"
+      },
+      {
+        "Path": "HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\ContentDeliveryManager",
+        "Name": "SoftLandingEnabled",
+        "Type": "DWord",
+        "Value": "0",
+        "OriginalValue": "1"
+      }
+    ]
+  },
+  "WPFTweaksOptimizeCPUPriority": {
+    "Content": "Optimize CPU Priority for Games",
+    "Description": "Configures CPU priority settings to favor foreground applications and games.",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c020_",
+    "registry": [
+      {
+        "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\PriorityControl",
+        "Name": "Win32PrioritySeparation",
+        "Type": "DWord",
+        "Value": "38",
+        "OriginalValue": "2"
+      }
+    ]
+  },
+  "WPFTweaksDisableNaglesAlgorithm": {
+    "Content": "Disable Nagle's Algorithm",
+    "Description": "Disables Nagle's Algorithm for all network interfaces to reduce network latency.",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c012_",
+    "InvokeScript": [
+      "$interfaces = Get-NetAdapter | Where-Object {$_.Status -eq 'Up'}",
+      "foreach ($interface in $interfaces) {",
+      "    $path = 'HKLM:\\SYSTEM\\CurrentControlSet\\Services\\Tcpip\\Parameters\\Interfaces\\' + $interface.InterfaceGuid",
+      "    if (Test-Path $path) {",
+      "        try {",
+      "            Set-ItemProperty -Path $path -Name 'TcpAckFrequency' -Value 1 -Type DWord -Force",
+      "            Set-ItemProperty -Path $path -Name 'TCPNoDelay' -Value 1 -Type DWord -Force",
+      "        } catch {",
+      "            Write-Warning \"Failed to disable Nagle for interface $($interface.Name): $_\"",
+      "        }",
+      "    }",
+      "}"
+    ]
+  },
+  "WPFTweaksHighPrecisionTimer": {
+    "Content": "Enable High Precision Timer",
+    "Description": "Enables high precision event timer for better timing accuracy in games and applications.",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c025_",
+    "InvokeScript": [
+      "bcdedit /set useplatformclock true",
+      "bcdedit /set disabledynamictick yes"
+    ],
+    "UndoScript": [
+      "bcdedit /set useplatformclock false",
+      "bcdedit /set disabledynamictick no"
+    ]
+  },
+  "WPFTweaksDisableCPUCoreParking": {
+    "Content": "Disable CPU Core Parking",
+    "Description": "Prevents Windows from parking CPU cores to ensure consistent performance.",
+    "category": "🎮 Gaming",
+    "panel": "3",
+    "Order": "c030_",
+    "registry": [
+      {
+        "Path": "HKLM:\\SYSTEM\\CurrentControlSet\\Control\\Power\\PowerSettings\\54533251-82be-4824-96c1-47b60b740d00\\0cc5b647-c1df-4637-891a-dec35c318583",
+        "Name": "ValueMax",
+        "Type": "DWord",
+        "Value": "0",
+        "OriginalValue": "100"
       }
     ]
   }

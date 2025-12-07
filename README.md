@@ -54,11 +54,20 @@ This application provides a clean, interactive console interface to apply and un
 - **Interactive UI**: Category-based browsing with detailed tweak descriptions
 - **Admin Checks**: Validates elevation and exits gracefully if not admin
 - **Error Handling**: Comprehensive error handling with user-friendly messages
-- **Configuration-Driven**: 66+ tweaks loaded from JSON, extensible without code changes
+- **Configuration-Driven**: 90 tweaks loaded from JSON, extensible without code changes
+- **3-Tier Preset System**: Tweaks organized into Minimum, Recommended, and Gaming categories
 
 ### 📋 Configuration
 
 The application loads tweaks from `config/tweaks.json`, sourced from the [m-serafim/winutil](https://github.com/m-serafim/winutil) project.
+
+#### Tweak Categories
+
+All tweaks are organized into three preset categories:
+
+- **🔹 Minimum** (34 tweaks): Light tweaks, visual adjustments, and safe privacy enhancements
+- **⭐ Recommended** (38 tweaks): Balanced optimization, power plans, DNS settings, and standard performance improvements
+- **🎮 Gaming** (18 tweaks): Aggressive performance tweaks, latency reduction, MSI mode, and hidden power plans
 
 #### JSON Validation
 
@@ -77,7 +86,7 @@ The JSON format includes:
   "TweakKey": {
     "Content": "Tweak Name",
     "Description": "What this tweak does",
-    "category": "Essential Tweaks",
+    "category": "🔹 Minimum",
     "registry": [...],
     "service": [...],
     "ScheduledTask": [...],
@@ -86,6 +95,34 @@ The JSON format includes:
   }
 }
 ```
+
+#### New Tweaks (24 added)
+
+The following performance and optimization tweaks have been added:
+- Game Mode
+- High Performance Power Plan
+- Ultimate Performance Power Plan
+- Disable Fast Startup
+- Disable Window Animations
+- Disable Transparency Effects
+- Adjust for Best Performance
+- Optimize DNS Settings (Cloudflare 1.1.1.1)
+- TCP/IP Optimization
+- Disable Network Throttling
+- Hardware Accelerated GPU Scheduling
+- Enable MSI Mode for GPU
+- Disable Superfetch/Prefetch
+- Optimize Virtual Memory
+- Disable Search Indexing
+- Enable TRIM for SSD
+- Disable Telemetry & Data Collection
+- Disable Background Apps
+- Disable Cortana
+- Disable Windows Tips & Suggestions
+- Optimize CPU Priority for Games
+- Disable Nagle's Algorithm
+- High Precision Timer
+- Disable CPU Core Parking
 
 ## Architecture
 
