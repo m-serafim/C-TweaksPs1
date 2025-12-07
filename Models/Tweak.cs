@@ -37,9 +37,15 @@ namespace C_TweaksPs1.Models
         [JsonPropertyName("Order")]
         public string Order { get; set; } = string.Empty;
 
+        /// <summary>
+        /// Optional documentation link for more information about the tweak.
+        /// </summary>
         [JsonPropertyName("link")]
         public string? Link { get; set; }
 
+        /// <summary>
+        /// List of Windows Registry modifications to apply when executing this tweak.
+        /// </summary>
         [JsonPropertyName("registry")]
         public List<RegistryEntry>? Registry { get; set; }
 
