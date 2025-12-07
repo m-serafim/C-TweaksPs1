@@ -25,9 +25,15 @@ namespace C_TweaksPs1.Models
         [JsonPropertyName("category")]
         public string Category { get; set; } = string.Empty;
 
+        /// <summary>
+        /// The UI panel number where this tweak should be displayed.
+        /// </summary>
         [JsonPropertyName("panel")]
         public string Panel { get; set; } = string.Empty;
 
+        /// <summary>
+        /// The ordering key used to sort tweaks within their category.
+        /// </summary>
         [JsonPropertyName("Order")]
         public string Order { get; set; } = string.Empty;
 
