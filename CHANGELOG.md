@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Security
+- ✅ CodeQL security scan passed with 0 alerts
+- All code changes reviewed and validated
+
 ### Fixed
 - Fixed JSON parsing errors caused by embedded PowerShell code blocks in config/tweaks.json
 - Fixed 17 instances of corrupted JSON structure from fix_json.ps1 script
