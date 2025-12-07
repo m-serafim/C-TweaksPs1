@@ -2408,20 +2408,7 @@
         "Value": "0",
         "OriginalValue": "<RemoveEntry>"
       }
-    ]
-    
-    param($match)
-    $name = $match.Groups[1].Value
-    $script = $match.Groups[2].Value
-    # Replace line breaks with \n
-    $script = $script -replace '\r?\n', '\n'
-    # Escape backslashes (but not already escaped ones)
-    $script = $script -replace '\\', '\\'
-    # Escape double quotes
-    $script = $script -replace '"', '\"'
-    
-    "`"$name`": [`"$script`"]"
-,
+    ],
     "link": "https://winutil.christitus.com/dev/tweaks/z--advanced-tweaks---caution/removecopilot"
   },
   "WPFTweaksRecallOff": {
