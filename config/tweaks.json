@@ -2624,7 +2624,7 @@
     "Description": "Erases TEMP Folders",
     "category": "Essential Tweaks",
     "panel": "1",
-    "Order": "a002_"
+    "Order": "a002_",
     "link": "https://winutil.christitus.com/dev/tweaks/essential-tweaks/deletetempfiles"
   },
   "WPFTweaksDVR": {
