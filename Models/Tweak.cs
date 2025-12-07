@@ -2,8 +2,14 @@ using System.Text.Json.Serialization;
 
 namespace C_TweaksPs1.Models
 {
+    /// <summary>
+    /// Represents a Windows system tweak with associated modifications.
+    /// </summary>
     public class Tweak
     {
+        /// <summary>
+        /// The display name of the tweak.
+        /// </summary>
         [JsonPropertyName("Content")]
         public string Content { get; set; } = string.Empty;
 
