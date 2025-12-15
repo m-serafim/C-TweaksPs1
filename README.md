@@ -253,4 +253,4 @@ For issues or questions:
 
 ---
 
-**Made with ❤️ for Windows power users**
+**Made for Windows power users**
